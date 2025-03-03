@@ -1,0 +1,51 @@
+[gd_scene load_steps=7 format=3 uid="uid://dx1ex03k36brd"]
+
+[ext_resource type="Material" uid="uid://b5237x26xqy1o" path="res://Materials/transparent_material.tres" id="1_56k67"]
+[ext_resource type="Material" uid="uid://xai6q30nlnqb" path="res://Materials/metal_material.tres" id="2_3by20"]
+[ext_resource type="Material" uid="uid://ey44khwsulld" path="res://Materials/textured_material.tres" id="3_4hb2b"]
+[ext_resource type="Material" uid="uid://b1lqgdpsg7f8g" path="res://Materials/ground_material.tres" id="4_s6jb7"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_7t3kp"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_7xqsr"]
+
+[node name="Challenge" type="Node3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.59687, 0)
+material_override = ExtResource("1_56k67")
+mesh = SubResource("CapsuleMesh_7t3kp")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.83763, 1.51385, 0)
+material_override = ExtResource("2_3by20")
+mesh = SubResource("CapsuleMesh_7t3kp")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.743, 1.61343, 0)
+material_override = ExtResource("3_4hb2b")
+mesh = SubResource("CapsuleMesh_7t3kp")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.999704, 0.02431, 7.24496e-10, -0.0133737, 0.549968, 0.835078, 0.0203008, -0.834832, 0.550131, 0, 3.67919, 0)
+visible = false
+light_energy = 0.0
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(0.999704, 0.02431, 1.14073e-09, -0.0133737, 0.549968, 0.835078, 0.0203008, -0.834832, 0.550131, -0.564768, 1.49405, 0)
+visible = false
+light_color = Color(1, 0.196078, 1, 1)
+light_energy = 9.076
+shadow_enabled = true
+omni_range = 1.8115
+
+[node name="Ground" type="MeshInstance3D" parent="."]
+transform = Transform3D(4.08176, 0, 0, 0, 1, 0, 0, 0, 4.04575, 0, 0.357824, 0)
+material_override = ExtResource("4_s6jb7")
+mesh = SubResource("PlaneMesh_7xqsr")
+
+[node name="SpotLight3D" type="SpotLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.0348646, 0.999392, 0, -0.999392, 0.0348646, 1.81355, 4.24094, 0)
+light_color = Color(0.513726, 1, 1, 1)
+light_energy = 9.076
+shadow_enabled = true

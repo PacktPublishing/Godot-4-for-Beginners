@@ -1,0 +1,39 @@
+[gd_scene load_steps=4 format=3 uid="uid://gbc667dvs0na"]
+
+[ext_resource type="Material" uid="uid://crbvm2fwrlfhi" path="res://Materials/stick_material.tres" id="1_rwvl7"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_lmauk"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_wx3uw"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="Head" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.45489, 0)
+material_override = ExtResource("1_rwvl7")
+mesh = SubResource("SphereMesh_lmauk")
+
+[node name="Body" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.323954, 0, 0, 0, 2.06984, 0, 0, 0, 0.359322, 0, 2.93686, 0)
+material_override = ExtResource("1_rwvl7")
+mesh = SubResource("BoxMesh_wx3uw")
+
+[node name="Left_Arm" type="MeshInstance3D" parent="."]
+transform = Transform3D(-0.192218, 1.14518, 0, -0.260765, -0.844142, 0, 0, 0, 0.359322, -0.599129, 3.82047, 0)
+material_override = ExtResource("1_rwvl7")
+mesh = SubResource("BoxMesh_wx3uw")
+
+[node name="Right_Arm" type="MeshInstance3D" parent="."]
+transform = Transform3D(-0.20126, -1.11473, 0.00335942, 0.253759, -0.883009, 0.0123613, -0.00685246, 0.040825, 0.359094, 0.597523, 3.82047, 0)
+material_override = ExtResource("1_rwvl7")
+mesh = SubResource("BoxMesh_wx3uw")
+
+[node name="Right_Leg" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.199636, -1.11929, 0.0128042, 0.255039, 0.877234, -0.000374432, -0.00685247, 0.040825, 0.359094, 0.597523, 1.66748, 0)
+material_override = ExtResource("1_rwvl7")
+mesh = SubResource("BoxMesh_wx3uw")
+
+[node name="Left_Leg" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.202144, 1.11165, -0.00331626, -0.253055, 0.886895, -0.012373, -0.00685247, 0.040825, 0.359094, -0.528065, 1.66748, 0)
+material_override = ExtResource("1_rwvl7")
+mesh = SubResource("BoxMesh_wx3uw")
