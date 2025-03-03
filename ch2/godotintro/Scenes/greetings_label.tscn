@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://bwxot7jnvubuc"]
+
+[ext_resource type="Script" path="res://Scripts/greetings_label.gd" id="1_ptcir"]
+
+[node name="GreetingsLabel" type="Label"]
+offset_right = 40.0
+offset_bottom = 23.0
+text = "Hello World!"
+script = ExtResource("1_ptcir")
