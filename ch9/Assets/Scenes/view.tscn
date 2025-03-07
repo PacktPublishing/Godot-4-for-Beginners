@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://bvyl3dgh05sjm"]
+
+[ext_resource type="Script" uid="uid://tdugr7j55gv6" path="res://Assets/Scripts/view.gd" id="1_vo0hl"]
+
+[node name="View" type="Node3D"]
+script = ExtResource("1_vo0hl")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+current = true
+fov = 40.0

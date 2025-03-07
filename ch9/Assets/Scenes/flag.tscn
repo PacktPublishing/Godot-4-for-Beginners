@@ -1,0 +1,24 @@
+[gd_scene load_steps=6 format=3 uid="uid://rmb4tqwu71u2"]
+
+[ext_resource type="Script" uid="uid://c8kvafen5gs6a" path="res://Assets/Scripts/flag.gd" id="1_fjdk5"]
+[ext_resource type="Texture2D" uid="uid://doeyk6w22dmnq" path="res://Assets/tex/palette.png" id="2_fa8yb"]
+[ext_resource type="ArrayMesh" uid="uid://v3583r87imvd" path="res://Assets/obj/flag.obj" id="3_nx5ni"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ts4f7"]
+albedo_texture = ExtResource("2_fa8yb")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_v7xjy"]
+size = Vector3(1.22366, 1.94043, 0.266113)
+
+[node name="Flag" type="Area3D"]
+script = ExtResource("1_fjdk5")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+material_override = SubResource("StandardMaterial3D_ts4f7")
+mesh = ExtResource("3_nx5ni")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.36174, 1.09229, -0.0690918)
+shape = SubResource("BoxShape3D_v7xjy")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

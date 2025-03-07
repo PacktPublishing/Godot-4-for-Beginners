@@ -1,0 +1,26 @@
+[gd_scene load_steps=6 format=3 uid="uid://b3uuvjdcp7jht"]
+
+[ext_resource type="Texture2D" uid="uid://doeyk6w22dmnq" path="res://Assets/tex/palette.png" id="1_edvqy"]
+[ext_resource type="Script" uid="uid://bt3kfc3gfuntj" path="res://Assets/Scripts/gem.gd" id="1_xp2mg"]
+[ext_resource type="ArrayMesh" uid="uid://c4odqwnk4n7q3" path="res://Assets/obj/gem.obj" id="2_xp2mg"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_d1wgw"]
+albedo_texture = ExtResource("1_edvqy")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_1yy3y"]
+size = Vector3(0.548844, 0.351151, 0.709534)
+
+[node name="Gem" type="Node3D"]
+script = ExtResource("1_xp2mg")
+
+[node name="Area3D" type="Area3D" parent="."]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Area3D"]
+material_override = SubResource("StandardMaterial3D_d1wgw")
+mesh = ExtResource("2_xp2mg")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00536871, 0.00603485, -0.00509644)
+shape = SubResource("BoxShape3D_1yy3y")
+
+[connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]

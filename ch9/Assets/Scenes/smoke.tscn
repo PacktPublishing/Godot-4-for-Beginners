@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://dmjwbntm8aiao"]
+
+[ext_resource type="ArrayMesh" uid="uid://bbujbq2bd5wt1" path="res://Assets/obj/cloud_1.obj" id="1_bhpmv"]
+
+[sub_resource type="Curve" id="Curve_ca0x4"]
+_data = [Vector2(0.00568181, 0), 0.0, 0.0, 0, 0, Vector2(0.954545, 1), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[node name="Smoke" type="CPUParticles3D"]
+transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, 0, 0, 0)
+emitting = false
+amount = 1
+lifetime = 2.0
+one_shot = true
+mesh = ExtResource("1_bhpmv")
+gravity = Vector3(0, 1, 0)
+scale_amount_min = 0.0
+scale_amount_curve = SubResource("Curve_ca0x4")
