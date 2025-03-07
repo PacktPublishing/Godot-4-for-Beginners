@@ -1,0 +1,31 @@
+[gd_scene load_steps=6 format=3 uid="uid://cxtl5scn5sxbp"]
+
+[ext_resource type="Script" uid="uid://wom1cwsp13ow" path="res://player.gd" id="1_i3pqv"]
+[ext_resource type="Texture2D" uid="uid://doeyk6w22dmnq" path="res://Assets/tex/palette.png" id="1_onrkg"]
+[ext_resource type="ArrayMesh" uid="uid://m5bkin1u4npa" path="res://Assets/obj/slime.obj" id="2_i3pqv"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hqtel"]
+albedo_texture = ExtResource("1_onrkg")
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_sweqy"]
+radius = 0.381719
+
+[node name="CharacterBody3D" type="CharacterBody3D"]
+script = ExtResource("1_i3pqv")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
+material_override = SubResource("StandardMaterial3D_hqtel")
+mesh = ExtResource("2_i3pqv")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.152613, 0)
+shape = SubResource("SphereShape3D_sweqy")
+
+[node name="Player" type="Node3D" parent="."]
+
+[node name="Camera3D" type="Camera3D" parent="Player"]
+transform = Transform3D(-0.997313, 0, -0.0732557, -0.01896, 0.965926, 0.258124, 0.0707596, 0.258819, -0.963331, 0, 1, -2.58002)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="Player"]
+transform = Transform3D(1, 0, 0, 0, -0.895913, 0.444229, 0, -0.444229, -0.895913, 0, 1.54761, -2.22072)
