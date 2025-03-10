@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dxgsn8jxthnmh"
+path="res://.godot/imported/Adventures in Adventureland.mp3-e11f1be2e0b21e0e7488b4b5eb112762.mp3str"
+
+[deps]
+
+source_file="res://Assets/Audio/Adventures in Adventureland.mp3"
+dest_files=["res://.godot/imported/Adventures in Adventureland.mp3-e11f1be2e0b21e0e7488b4b5eb112762.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

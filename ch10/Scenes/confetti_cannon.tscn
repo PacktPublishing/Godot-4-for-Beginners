@@ -1,0 +1,162 @@
+[gd_scene load_steps=8 format=3 uid="uid://krdrn683vifd"]
+
+[ext_resource type="Script" uid="uid://b1fdhqo4dx20t" path="res://confetti_cannon.gd" id="1_mkl1s"]
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_ae6mx"]
+lifetime_randomness = 0.1
+particle_flag_rotate_y = true
+particle_flag_disable_z = true
+angle_min = 209.0
+angle_max = 327.0
+direction = Vector3(0, -1, 0)
+spread = 100.0
+initial_velocity_min = 65.0
+initial_velocity_max = 350.0
+angular_velocity_min = 280.0
+angular_velocity_max = 280.0
+gravity = Vector3(0, -100, 0)
+linear_accel_min = 12.0
+linear_accel_max = 12.0
+scale_min = 5.0
+scale_max = 20.0
+color = Color(0.176282, 0.669874, 0.929742, 1)
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_mkl1s"]
+lifetime_randomness = 0.1
+particle_flag_rotate_y = true
+particle_flag_disable_z = true
+angle_min = 209.0
+angle_max = 327.0
+direction = Vector3(0, -1, 0)
+spread = 100.0
+initial_velocity_min = 65.0
+initial_velocity_max = 350.0
+angular_velocity_min = 280.0
+angular_velocity_max = 280.0
+gravity = Vector3(0, 98, 0)
+linear_accel_min = 12.0
+linear_accel_max = 12.0
+scale_min = 5.0
+scale_max = 10.0
+color = Color(0.961565, 0.61328, 0.303424, 1)
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_wgag3"]
+particle_flag_rotate_y = true
+particle_flag_disable_z = true
+angle_min = 200.0
+angle_max = 330.0
+direction = Vector3(0, -1, 0)
+initial_velocity_min = 65.0
+initial_velocity_max = 350.0
+angular_velocity_min = 280.0
+angular_velocity_max = 280.0
+gravity = Vector3(0, 98, 0)
+linear_accel_min = 12.0
+linear_accel_max = 12.0
+scale_min = 5.0
+scale_max = 10.0
+color = Color(0.282353, 0.827451, 0.117647, 1)
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_wadp0"]
+particle_flag_rotate_y = true
+particle_flag_disable_z = true
+angle_min = 200.0
+angle_max = 350.0
+direction = Vector3(0, -1, 0)
+initial_velocity_min = 65.0
+initial_velocity_max = 350.0
+gravity = Vector3(0, 98, 0)
+linear_accel_min = 12.0
+linear_accel_max = 12.0
+scale_min = 5.0
+scale_max = 10.0
+color = Color(1, 1, 0.109804, 1)
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_8pujo"]
+particle_flag_rotate_y = true
+particle_flag_disable_z = true
+angle_min = 200.0
+angle_max = 350.0
+direction = Vector3(0, -1, 0)
+spread = 100.0
+initial_velocity_min = 65.0
+initial_velocity_max = 350.0
+gravity = Vector3(0, 98, 0)
+linear_accel_min = 12.0
+linear_accel_max = 12.0
+scale_min = 5.0
+scale_max = 10.0
+color = Color(1, 0.137255, 0.0431373, 1)
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_hmkty"]
+particle_flag_rotate_y = true
+particle_flag_disable_z = true
+angle_min = 200.0
+angle_max = 350.0
+direction = Vector3(0, -1, 0)
+spread = 100.0
+initial_velocity_min = 65.0
+initial_velocity_max = 350.0
+gravity = Vector3(0, 98, 0)
+linear_accel_min = 12.0
+linear_accel_max = 12.0
+scale_min = 5.0
+scale_max = 10.0
+color = Color(1, 0.780392, 1, 1)
+
+[node name="Confetti_Cannon" type="Node2D"]
+script = ExtResource("1_mkl1s")
+
+[node name="Blue" type="GPUParticles2D" parent="."]
+emitting = false
+amount = 16
+one_shot = true
+explosiveness = 0.6
+randomness = 0.2
+local_coords = true
+process_material = SubResource("ParticleProcessMaterial_ae6mx")
+
+[node name="Orange" type="GPUParticles2D" parent="."]
+emitting = false
+amount = 16
+one_shot = true
+explosiveness = 0.6
+randomness = 0.2
+local_coords = true
+process_material = SubResource("ParticleProcessMaterial_mkl1s")
+
+[node name="Green" type="GPUParticles2D" parent="."]
+emitting = false
+amount = 16
+one_shot = true
+explosiveness = 0.6
+randomness = 0.3
+local_coords = true
+process_material = SubResource("ParticleProcessMaterial_wgag3")
+
+[node name="Yellow" type="GPUParticles2D" parent="."]
+emitting = false
+amount = 16
+one_shot = true
+explosiveness = 0.6
+randomness = 0.3
+local_coords = true
+process_material = SubResource("ParticleProcessMaterial_wadp0")
+
+[node name="Red" type="GPUParticles2D" parent="."]
+emitting = false
+amount = 16
+one_shot = true
+explosiveness = 0.6
+randomness = 0.3
+local_coords = true
+process_material = SubResource("ParticleProcessMaterial_8pujo")
+
+[node name="Pink" type="GPUParticles2D" parent="."]
+emitting = false
+amount = 16
+one_shot = true
+explosiveness = 0.6
+randomness = 0.3
+local_coords = true
+process_material = SubResource("ParticleProcessMaterial_hmkty")

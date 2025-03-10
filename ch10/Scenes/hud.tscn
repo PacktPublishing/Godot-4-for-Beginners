@@ -1,0 +1,31 @@
+[gd_scene load_steps=6 format=3 uid="uid://bgx058ijxay06"]
+
+[ext_resource type="Texture2D" uid="uid://dl2bhitwxodgd" path="res://Assets/Hearts/ThreeGreyHearts.png" id="1_6fbih"]
+[ext_resource type="Texture2D" uid="uid://bifya4yvkykof" path="res://Assets/Hearts/TwoGreyHearts.png" id="2_t1xeu"]
+[ext_resource type="Texture2D" uid="uid://2d77uxqd4q8h" path="res://Assets/Hearts/OneGreyHeart.png" id="3_36asn"]
+[ext_resource type="Texture2D" uid="uid://c7f6idrbtujv3" path="res://Assets/Hearts/Heart.png" id="4_8jye8"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_43w4t"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_6fbih")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_t1xeu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_36asn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_8jye8")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[node name="HUD" type="AnimatedSprite2D"]
+scale = Vector2(3, 3)
+sprite_frames = SubResource("SpriteFrames_43w4t")
+animation = &"idle"
