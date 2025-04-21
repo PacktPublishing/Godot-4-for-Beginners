@@ -31,9 +31,7 @@ func _unhandled_input(event):
 	
 	# Check if the event was a key press.
 	elif event is InputEventKey:
-		# Show the label whenever a key is pressed.
-		$GreetingsLabel.show()
-
-		# If the Enter key was pressed, set the label's text to "Hello World!"
+		# Only show the label and set the text if the Enter key was pressed.
 		if event.keycode == KEY_ENTER:
+			$GreetingsLabel.show()
 			$GreetingsLabel.text = "Hello World!"
