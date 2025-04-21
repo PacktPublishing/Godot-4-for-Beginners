@@ -1,7 +1,7 @@
 extends Node2D
 var health : int = 100
 var jump_strength : float = 220.5
-var isDashing : bool = true
+var is_dashing : bool = true
 var player_name : String = "Riptide"
 var player_level : int = 23
 var player_exp : float = 123.45
