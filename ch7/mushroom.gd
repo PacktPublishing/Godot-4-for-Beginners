@@ -7,7 +7,7 @@ var health = 1
 
 func _physics_process(delta):
 	add_gravity(delta)
-	moveEnemy()
+	update_driection()
 	move_and_slide()
 	reverse_direction()
 	platform_edge()
@@ -20,7 +20,7 @@ func add_gravity(delta):
 		velocity += get_gravity() * delta
 
 
-func moveEnemy():
+func update_driection():
 	#move enemy at constant speed
 	velocity.x = SPEED * direction
 
