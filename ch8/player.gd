@@ -92,14 +92,16 @@ func handle_rotation(delta):
 	
 	
 func handle_respawn(delta):
-	if position.y < -10:
+	var border_position_y = -10  # Threshold below which the player respawns
+
+	if position.y < border_position_y:
 		get_tree().reload_current_scene()
-		
-	#Animation for scale (jumping and landing)
-	model.scale = model.scale.lerp(Vector3(1,1,1), delta * smoothing_factor)
-	
-	#Animation when landing
+
+	# Animation for scale (jumping and landing)
+	model.scale = model.scale.lerp(Vector3(1, 1, 1), delta * 10)
+
+	# Animation when landing
 	if is_on_floor() and vertical_velocity > 2 and !previously_floored:
-		model.scale = Vector3(1.25,0.75,1.25)
-		
+		model.scale = Vector3(1.25, 0.75, 1.25)
+
 	previously_floored = is_on_floor()
