@@ -13,11 +13,14 @@ signal gem_collected
 
 var movement_velocity: Vector3
 var rotation_direction: float
-var gravity = 0
+var vertical_velocity = 0
 var previously_floored = false
 var jump_single = true
 var jump_double = true
 var gems = 0
+var smoothing_factor = 10
+
+const GRAVITY = 25
 
 
 func _physics_process(delta):
@@ -30,14 +33,14 @@ func _physics_process(delta):
 	
 
 func handle_gravity(delta):
-	gravity += 25 * delta
-	if gravity > 0 and is_on_floor():
+	vertical_velocity += GRAVITY * delta
+	if vertical_velocity > 0 and is_on_floor():
 		jump_single = true
-		gravity = 0
+		vertical_velocity = 0
 
 
 func jump():
-	gravity -= jump_strength
+	vertical_velocity -= jump_strength
 	model.scale = Vector3(0.5,1.5,0.5)
 	if jump_single:
 		jump_single = false
@@ -74,8 +77,8 @@ func collect_gems():
 func handle_movement(delta):
 	var applied_velocity: Vector3
 	
-	applied_velocity = velocity.lerp(movement_velocity, delta * 10)
-	applied_velocity.y = -gravity
+	applied_velocity = velocity.lerp(movement_velocity, delta * smoothing_factor)
+	applied_velocity.y = -vertical_velocity
 	
 	velocity = applied_velocity
 	move_and_slide()
@@ -85,7 +88,7 @@ func handle_rotation(delta):
 	if Vector2(velocity.z, velocity.x).length() > 0:
 		rotation_direction = Vector2(velocity.z, velocity.x).angle()
 		
-	rotation.y = lerp_angle(rotation.y, rotation_direction, delta * 10)	
+	rotation.y = lerp_angle(rotation.y, rotation_direction, delta * smoothing_factor)	
 	
 	
 func handle_respawn(delta):
@@ -93,10 +96,10 @@ func handle_respawn(delta):
 		get_tree().reload_current_scene()
 		
 	#Animation for scale (jumping and landing)
-	model.scale = model.scale.lerp(Vector3(1,1,1), delta * 10)
+	model.scale = model.scale.lerp(Vector3(1,1,1), delta * smoothing_factor)
 	
 	#Animation when landing
-	if is_on_floor() and gravity > 2 and !previously_floored:
+	if is_on_floor() and vertical_velocity > 2 and !previously_floored:
 		model.scale = Vector3(1.25,0.75,1.25)
 		
 	previously_floored = is_on_floor()
