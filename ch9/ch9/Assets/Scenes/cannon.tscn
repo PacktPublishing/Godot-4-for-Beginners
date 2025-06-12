@@ -1,0 +1,33 @@
+[gd_scene load_steps=6 format=3 uid="uid://bcumqibyw8kx"]
+
+[ext_resource type="Texture2D" uid="uid://doeyk6w22dmnq" path="res://Assets/tex/palette.png" id="1_23j6s"]
+[ext_resource type="Script" uid="uid://c8n061uvu2vmi" path="res://Assets/Scripts/cannon.gd" id="1_72ky0"]
+[ext_resource type="ArrayMesh" uid="uid://dhiplr8u24ikj" path="res://Assets/obj/cannon.obj" id="2_72ky0"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_odvvv"]
+albedo_texture = ExtResource("1_23j6s")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_2p0kt"]
+size = Vector3(1, 1.0498, 1.42969)
+
+[node name="Cannon" type="Node3D"]
+script = ExtResource("1_72ky0")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D"]
+material_override = SubResource("StandardMaterial3D_odvvv")
+mesh = ExtResource("2_72ky0")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.502686, -0.214844)
+shape = SubResource("BoxShape3D_2p0kt")
+
+[node name="Cannonball_timer" type="Timer" parent="."]
+wait_time = 3.0
+autostart = true
+
+[node name="Marker3D" type="Marker3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, -1)
+
+[connection signal="timeout" from="Cannonball_timer" to="." method="_on_cannonball_timer_timeout"]

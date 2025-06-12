@@ -1,0 +1,16 @@
+[gd_scene load_steps=5 format=3 uid="uid://b52y7rejo6jnr"]
+
+[ext_resource type="Texture2D" uid="uid://doeyk6w22dmnq" path="res://Assets/tex/palette.png" id="1_b3oxr"]
+[ext_resource type="Script" uid="uid://xjggds4xsbbq" path="res://Assets/Scenes/cloud.gd" id="1_ck4tx"]
+[ext_resource type="ArrayMesh" uid="uid://bbujbq2bd5wt1" path="res://Assets/obj/cloud_1.obj" id="2_qaedo"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fcyt7"]
+albedo_texture = ExtResource("1_b3oxr")
+
+[node name="Cloud" type="Node3D"]
+script = ExtResource("1_ck4tx")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+material_override = SubResource("StandardMaterial3D_fcyt7")
+mesh = ExtResource("2_qaedo")
+skeleton = NodePath("")

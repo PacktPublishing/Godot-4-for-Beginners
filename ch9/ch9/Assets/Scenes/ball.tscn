@@ -1,0 +1,31 @@
+[gd_scene load_steps=6 format=3 uid="uid://b1sxb6ihlp0t4"]
+
+[ext_resource type="Script" uid="uid://b5lyjx4psnbf7" path="res://Assets/Scripts/ball.gd" id="1_vrucg"]
+[ext_resource type="Texture2D" uid="uid://doeyk6w22dmnq" path="res://Assets/tex/palette.png" id="2_5l3o1"]
+[ext_resource type="ArrayMesh" uid="uid://l2t0femer3p4" path="res://Assets/obj/bullet.obj" id="3_jtypj"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gchj4"]
+albedo_texture = ExtResource("2_5l3o1")
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_01kih"]
+radius = 0.39719
+height = 0.893465
+
+[node name="Ball" type="CharacterBody3D"]
+script = ExtResource("1_vrucg")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+material_override = SubResource("StandardMaterial3D_gchj4")
+mesh = ExtResource("3_jtypj")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0.444427)
+shape = SubResource("CapsuleShape3D_01kih")
+
+[node name="Destroy_timer" type="Timer" parent="."]
+wait_time = 5.0
+one_shot = true
+autostart = true
+ignore_time_scale = true
+
+[connection signal="timeout" from="Destroy_timer" to="." method="_on_destroy_timer_timeout"]

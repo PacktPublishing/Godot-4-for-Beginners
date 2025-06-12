@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://77tnk5ghu31d"
+path="res://.godot/imported/sign_arrow.obj-e6e0bfd87bb23fa4914b90efa8fe5ca7.mesh"
+
+[deps]
+
+files=["res://.godot/imported/sign_arrow.obj-e6e0bfd87bb23fa4914b90efa8fe5ca7.mesh"]
+
+source_file="res://Assets/obj/sign_arrow.obj"
+dest_files=["res://.godot/imported/sign_arrow.obj-e6e0bfd87bb23fa4914b90efa8fe5ca7.mesh", "res://.godot/imported/sign_arrow.obj-e6e0bfd87bb23fa4914b90efa8fe5ca7.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false
