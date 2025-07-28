@@ -25,14 +25,14 @@ Robert Henning</p>
 <img src="https://content.packt.com/B31515/cover_image_small.jpg" alt="Unity Cookbook, Fifth Edition" height="256px" align="right">
 </a>
 
-Creating games with Godot 4 can be overwhelming for beginners, especially when you're trying to learn its interface, understand how nodes and scenes work, and learn GDScript all at once. Drawing from years of teaching experience and his popular YouTube tutorials, Robert Henning breaks down these complex concepts into clear, digestible steps. As an educator specializing in game development, he knows exactly where newcomers struggle and has crafted this guide to address those challenges head-on.
-Starting with Godot 4’s setup, interface, and tools, you’ll quickly move to nodes and scenes, which are the building blocks of every Godot game. From there, you’ll explore both 2D and 3D game creation, so you’ll have a solid grasp of both worlds as you learn how to add key elements like players, enemies, collectibles, and lighting to make your game pop visually. What’s more, you’ll get hands-on with GDScript, Godot’s scripting language, to learn how to bring your game ideas to life.
-By the end of this book, you’ll have everything you need to create complete games in both 2D and 3D—from level design and game state management to score tracking and much more. Whether you’re just getting started or looking to level up your skills, this book will help you take your ideas and turn them into playable games.</details>
+Jumping into Godot 4 as a beginner can be overwhelming. You’re wrestling with a new interface, trying to wrap your head around how nodes and scenes work, and learning GDScript all at once. After years of teaching game development and creating YouTube tutorials, Robert Henning knows exactly where you’re likely to have those “wait, what?” moments. He’s built this guide to systematically address those challenges head-on, breaking down complex concepts into digestible steps.
+
+You’ll start by setting up Godot 4 and understanding its interface and tools. Then, you’ll dive into nodes and scenes—Godot’s way of organizing everything—which sounds intimidating but is actually quite intuitive. From there, you’ll explore both 2D and 3D game creation, adding key elements such as players, enemies, collectibles, and lighting effects that make your game pop visually. You’ll also get hands-on with Godot’s scripting language, GDScript, to bring your game ideas to life.
+
+By the end of this Godot 4 book, you’ll have the skills to build complete 2D and 3D games from scratch, covering everything from level design and game state management to score tracking and more. Whether you’re just getting started or are ready to level up, this book will help you turn your ideas into fully playable games.</details>
 <details open> 
   <summary><h2>Key Learnings</summary>
 <ul>
-
-<li>Install and set up the Godot 4 game engine</li>
 
 <li>Navigate and master the Godot 4 interface effectively</li>
 
@@ -44,7 +44,7 @@ By the end of this book, you’ll have everything you need to create complete ga
 
 <li>Script game mechanics using GDScript</li>
 
-<li>Implement key elements like players, enemies, and collectibles</li>
+<li>Implement key elements such as players, enemies, and collectibles</li>
 
 <li>Design engaging levels and manage game states</li>
 
@@ -59,25 +59,25 @@ By the end of this book, you’ll have everything you need to create complete ga
 
   <li>Let's Get Godot-ing!</li>
 
-  <li>First Steps</li>
+  <li>Exploring the Godot Engine Interface</li>
 
-  <li>Basic Building Blocks</li>
+  <li>Introduction to 3D</li>
 
-  <li>Node Tools and Parenting</li>
+  <li>Scripting with GDScript</li>
 
-  <li>Introduction to 3D, Materials, and Lighting</li>
+  <li>Understanding Vectors</li>
 
-  <li>Get Coding with GDScript</li>
+  <li>Creating a 2D Mini-Game in Godot – Part 1</li>
 
-  <li>Vectors</li>
+  <li>Creating a 2D Mini-Game in Godot – Part 2</li>
 
-  <li>Make a 2D Mini-Game in Godot</li>
+  <li>Creating a 3D Mini-Game in Godot – Part 1</li>
 
-  <li>Making the Move to 3D - Mini Platformer: Part 1</li>
+  <li>Creating a 3D Mini-Game in Godot – Part 2</li>
 
-  <li>Moving What You Made - Mini 3D Platformer: Part 2</li>
+  <li>Adding Game Juice</li>
 
-  <li>Moving Around in the Level You Made - Mini 3D Platformer: Part 3</li>
+  <li>Understanding Game Design</li>
 
   <li>Where to Next?</li>
 
