@@ -22,7 +22,7 @@ Robert Henning</p>
 <details open> 
   <summary><h2>About the book</summary>
 <a href="https://www.packtpub.com/en-us/product/godot-4-for-beginners-first-edition-9781836203094">
-<img src="https://content.packt.com/B31515/cover_image_small.jpg" alt="Unity Cookbook, Fifth Edition" height="256px" align="right">
+<img src="Cover.png" alt="Unity Cookbook, Fifth Edition" height="256px" align="right">
 </a>
 
 Jumping into Godot 4 as a beginner can be overwhelming. You’re wrestling with a new interface, trying to wrap your head around how nodes and scenes work, and learning GDScript all at once. After years of teaching game development and creating YouTube tutorials, Robert Henning knows exactly where you’re likely to have those “wait, what?” moments. He’s built this guide to systematically address those challenges head-on, breaking down complex concepts into digestible steps.
