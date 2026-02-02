@@ -20,23 +20,23 @@ func _ready():
 	#var remaining_health = take_spike_damage(10)  # Assume damage_amount is 10
 	#print("Remaining Health: ", remaining_health)
 	
+	print(health)
+	print(jump_strength)
+	print(is_dashing)
 	print(player_name)
-	print(player_level)
-	print(player_exp)
-	print(has_key)
 	
-	#player_level = player_level + 7
-	player_level += 7
-	print(player_level)
+	#health = health - 7
+	health -= 7
+	print(health)
 	
-	player_level -= 30
-	print (player_level)
+	player_level -= 93
+	print (player_health)
 	
-	player_level *= 2
-	print (player_level)
+	health *= 2
+	print (health)
 	
-	player_level /= 2
-	print (player_level)
+	health /= 2
+	print (health)
 	
 	
 	print(health)
